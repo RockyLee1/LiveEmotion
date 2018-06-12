@@ -11,9 +11,9 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
-@property (strong, nonatomic) PPStickerKeyboard *keyboard;
+@property (strong, nonatomic) BBLiveEmotionSession *session;
 
 @end
 
@@ -21,34 +21,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.session = [[BBLiveEmotionSession alloc] init];
+    self.session.hostTextView = self.textView;
+    
+    [self.view addSubview:self.session.emotionToggleBtn];
+    self.session.emotionToggleBtn.frame = CGRectMake(100, 100, 30, 30);
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
-
-- (PPStickerKeyboard *)keyboard
-{
-    if (!_keyboard) {
-        _keyboard = [[PPStickerKeyboard alloc] init];
-        _keyboard.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), [self.keyboard heightThatFits]);
-    }
-    
-    return _keyboard;
-}
-
-- (IBAction)changeBtnClicked:(UIButton *)sender
-{
-    if ([[sender titleForState:UIControlStateNormal] isEqualToString:@"表情"]) {
-        [sender setTitle:@"键盘" forState:UIControlStateNormal];
-        
-        self.textField.inputView = self.keyboard;
-        [self.textField reloadInputViews];
-    } else {
-        [sender setTitle:@"表情" forState:UIControlStateNormal];
-        
-        self.textField.inputView = nil;
-        [self.textField reloadInputViews];
-    }
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
