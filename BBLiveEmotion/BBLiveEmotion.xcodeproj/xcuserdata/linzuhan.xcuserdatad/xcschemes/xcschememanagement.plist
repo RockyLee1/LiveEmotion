@@ -7,17 +7,22 @@
 		<key>BBLiveEmotion.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>24</integer>
+			<integer>0</integer>
 		</dict>
 		<key>BBLiveEmotionResource.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>25</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>954E00E020C7E0420059BBCA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>954E014320C7E80D0059BBCA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

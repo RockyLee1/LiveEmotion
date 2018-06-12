@@ -16,5 +16,5 @@ FOUNDATION_EXPORT const unsigned char BBLiveEmotionVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <BBLiveEmotion/PublicHeader.h>
 
-#import "BBLiveEmotionSession.h"
-#import "BBLiveEmotionHandle.h"
+#import <BBLiveEmotion/BBLiveEmotionSession.h>
+#import <BBLiveEmotion/BBLiveEmotionHandle.h>

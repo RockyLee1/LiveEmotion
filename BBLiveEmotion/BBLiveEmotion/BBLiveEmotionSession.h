@@ -19,6 +19,9 @@ typedef NS_ENUM (NSUInteger, BBLiveEmotionKeyboardType) {
 
 @optional
 
+- (BOOL)emotionSessionShouldSelectEmotionWithEmotionImage:(UIImage *)image
+                                       emotionDescription:(NSString *)description;
+
 - (void)emotionSessionDidSelectEmotionWithEmotionImage:(UIImage *)image
                                     emotionDescription:(NSString *)description;
 
@@ -42,5 +45,7 @@ typedef NS_ENUM (NSUInteger, BBLiveEmotionKeyboardType) {
 @property (nonatomic, strong) UIColor *emotionTextColor;
 
 - (void)refreshTextUI;
+
+- (void)changeEmotionToggleBtnTypeWithKeyboardType:(BBLiveEmotionKeyboardType)keyboardType;
 
 @end

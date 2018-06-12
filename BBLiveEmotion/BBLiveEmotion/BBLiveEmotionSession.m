@@ -37,6 +37,15 @@
     return self;
 }
 
+- (void)changeEmotionToggleBtnTypeWithKeyboardType:(BBLiveEmotionKeyboardType)keyboardType
+{
+    if (keyboardType == BBLiveEmotionKeyboardTypeKeyboard) {
+        [_emotionToggleBtn setImage:BBLiveEmotionImage(@"icon_expression") forState:UIControlStateNormal];
+    } else if (_emotionKeyboardType == BBLiveEmotionKeyboardTypeEmotion) {
+        [_emotionToggleBtn setImage:BBLiveEmotionImage(@"icon_keyboard") forState:UIControlStateNormal];
+    }
+}
+
 - (void)refreshTextUI
 {
     if (self.hostTextView.text.length <= 0) {
@@ -124,10 +133,20 @@
 
 - (void)stickerKeyboard:(PPStickerKeyboard *)stickerKeyboard didClickEmoji:(PPEmoji *)emoji
 {
+    UIImage *emotionImage = BBLiveEmotionImage(emoji.imageName);
     NSString *description = emoji.emojiDescription;
     
     NSRange selectedRange = self.hostTextView.selectedRange;
     NSString *emojiString = description;
+    
+    BOOL isShouldSelect = YES;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(emotionSessionShouldSelectEmotionWithEmotionImage:emotionDescription:)]) {
+        isShouldSelect = [self.delegate emotionSessionShouldSelectEmotionWithEmotionImage:emotionImage emotionDescription:description];
+    }
+    
+    if (!isShouldSelect) {
+        return;
+    }
     
     NSMutableAttributedString *emojiAttributedString = [[NSMutableAttributedString alloc] initWithString:emojiString];
     

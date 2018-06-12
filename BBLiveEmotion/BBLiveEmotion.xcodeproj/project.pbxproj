@@ -47,9 +47,9 @@
 		954E015C20C8D5EC0059BBCA /* EmotionInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 954E015B20C8D5EC0059BBCA /* EmotionInfo.plist */; };
 		954E015F20C8D7570059BBCA /* UIImage+EmotionImageLoad.h in Headers */ = {isa = PBXBuildFile; fileRef = 954E015D20C8D7570059BBCA /* UIImage+EmotionImageLoad.h */; };
 		954E016020C8D7570059BBCA /* UIImage+EmotionImageLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 954E015E20C8D7570059BBCA /* UIImage+EmotionImageLoad.m */; };
-		954E017120C8F5FE0059BBCA /* BBLiveEmotionSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 954E016F20C8F5FE0059BBCA /* BBLiveEmotionSession.h */; };
+		954E017120C8F5FE0059BBCA /* BBLiveEmotionSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 954E016F20C8F5FE0059BBCA /* BBLiveEmotionSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		954E017220C8F5FE0059BBCA /* BBLiveEmotionSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 954E017020C8F5FE0059BBCA /* BBLiveEmotionSession.m */; };
-		954E017720C9170D0059BBCA /* BBLiveEmotionHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = 954E017520C9170D0059BBCA /* BBLiveEmotionHandle.h */; };
+		954E017720C9170D0059BBCA /* BBLiveEmotionHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = 954E017520C9170D0059BBCA /* BBLiveEmotionHandle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		954E017820C9170D0059BBCA /* BBLiveEmotionHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 954E017620C9170D0059BBCA /* BBLiveEmotionHandle.m */; };
 		954E017920CA712F0059BBCA /* BBLiveEmotionResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 954E014420C7E80D0059BBCA /* BBLiveEmotionResource.bundle */; };
 /* End PBXBuildFile section */
@@ -236,6 +236,7 @@
 			files = (
 				954E013920C7E2B00059BBCA /* UIScreen+PPAddition.h in Headers */,
 				954E017120C8F5FE0059BBCA /* BBLiveEmotionSession.h in Headers */,
+				954E017720C9170D0059BBCA /* BBLiveEmotionHandle.h in Headers */,
 				954E013220C7E2B00059BBCA /* UIButton+PPAddition.h in Headers */,
 				954E013D20C7E2B00059BBCA /* UIColor+PPAddition.h in Headers */,
 				954E012D20C7E2B00059BBCA /* NSString+PPAddition.h in Headers */,
@@ -246,7 +247,6 @@
 				954E012C20C7E2B00059BBCA /* PPSlideLineButton.h in Headers */,
 				954E013420C7E2B00059BBCA /* PPReusablePage.h in Headers */,
 				954E010720C7E2A40059BBCA /* PPEmoji.h in Headers */,
-				954E017720C9170D0059BBCA /* BBLiveEmotionHandle.h in Headers */,
 				954E010820C7E2A40059BBCA /* PPStickerPageView.h in Headers */,
 				954E013C20C7E2B00059BBCA /* PPTextBackedString.h in Headers */,
 				954E011020C7E2A40059BBCA /* PPStickerDataManager.h in Headers */,
@@ -453,8 +453,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 arm64";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -510,6 +511,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 arm64";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -539,7 +541,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "armv7 arm64";
 			};
 			name = Debug;
 		};
@@ -566,7 +568,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "armv7 arm64";
 			};
 			name = Release;
 		};
@@ -581,11 +583,13 @@
 				INFOPLIST_FILE = BBLiveEmotionResource/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bobei.BBLiveEmotionResource;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				VALID_ARCHS = "armv7 arm64";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -606,6 +610,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				VALID_ARCHS = "armv7 arm64";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
