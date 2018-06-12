@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83821A322F40A3ADBAF0C41F /* libPods-BBLiveEmotion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B234F3A2C1BE5DB2E3E1BBD /* libPods-BBLiveEmotion.a */; };
 		954E00E620C7E0420059BBCA /* BBLiveEmotion.h in Headers */ = {isa = PBXBuildFile; fileRef = 954E00E420C7E0420059BBCA /* BBLiveEmotion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		954E010520C7E2A40059BBCA /* PPStickerPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 954E00F520C7E2A10059BBCA /* PPStickerPageView.m */; };
 		954E010620C7E2A40059BBCA /* PPSticker.h in Headers */ = {isa = PBXBuildFile; fileRef = 954E00F620C7E2A10059BBCA /* PPSticker.h */; };
@@ -65,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B234F3A2C1BE5DB2E3E1BBD /* libPods-BBLiveEmotion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BBLiveEmotion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78CE3638E05923C777567687 /* Pods-BBLiveEmotion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBLiveEmotion.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-BBLiveEmotion/Pods-BBLiveEmotion.debug.xcconfig"; sourceTree = "<group>"; };
 		954E00E120C7E0420059BBCA /* BBLiveEmotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BBLiveEmotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		954E00E420C7E0420059BBCA /* BBLiveEmotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveEmotion.h; sourceTree = "<group>"; };
 		954E00E520C7E0420059BBCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 		954E017020C8F5FE0059BBCA /* BBLiveEmotionSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveEmotionSession.m; sourceTree = "<group>"; };
 		954E017520C9170D0059BBCA /* BBLiveEmotionHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveEmotionHandle.h; sourceTree = "<group>"; };
 		954E017620C9170D0059BBCA /* BBLiveEmotionHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveEmotionHandle.m; sourceTree = "<group>"; };
+		F6E77189DC3F50B279016EC0 /* Pods-BBLiveEmotion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBLiveEmotion.release.xcconfig"; path = "../Pods/Target Support Files/Pods-BBLiveEmotion/Pods-BBLiveEmotion.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83821A322F40A3ADBAF0C41F /* libPods-BBLiveEmotion.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +144,8 @@
 				954E00E320C7E0420059BBCA /* BBLiveEmotion */,
 				954E014520C7E80D0059BBCA /* BBLiveEmotionResource */,
 				954E00E220C7E0420059BBCA /* Products */,
+				B57F8F7B3F43FF62FB44C85E /* Pods */,
+				E8358EE30675320CC608E97C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,6 +234,23 @@
 			path = BBLiveEmotionResource;
 			sourceTree = "<group>";
 		};
+		B57F8F7B3F43FF62FB44C85E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78CE3638E05923C777567687 /* Pods-BBLiveEmotion.debug.xcconfig */,
+				F6E77189DC3F50B279016EC0 /* Pods-BBLiveEmotion.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E8358EE30675320CC608E97C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B234F3A2C1BE5DB2E3E1BBD /* libPods-BBLiveEmotion.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -266,10 +290,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 954E00E920C7E0420059BBCA /* Build configuration list for PBXNativeTarget "BBLiveEmotion" */;
 			buildPhases = (
+				8D08DB3036E03318226DFFA1 /* [CP] Check Pods Manifest.lock */,
 				954E00DC20C7E0420059BBCA /* Sources */,
 				954E00DD20C7E0420059BBCA /* Frameworks */,
 				954E00DE20C7E0420059BBCA /* Headers */,
 				954E00DF20C7E0420059BBCA /* Resources */,
+				C32D61F76E74C078BCF06573 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -353,6 +379,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D08DB3036E03318226DFFA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BBLiveEmotion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C32D61F76E74C078BCF06573 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-BBLiveEmotion/Pods-BBLiveEmotion-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		954E00DC20C7E0420059BBCA /* Sources */ = {
@@ -519,6 +581,7 @@
 		};
 		954E00EA20C7E0420059BBCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78CE3638E05923C777567687 /* Pods-BBLiveEmotion.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -531,11 +594,7 @@
 				INFOPLIST_FILE = BBLiveEmotion/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bobei.BBLiveEmotion;
@@ -548,6 +607,7 @@
 		};
 		954E00EB20C7E0420059BBCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6E77189DC3F50B279016EC0 /* Pods-BBLiveEmotion.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -560,11 +620,7 @@
 				INFOPLIST_FILE = BBLiveEmotion/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bobei.BBLiveEmotion;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
