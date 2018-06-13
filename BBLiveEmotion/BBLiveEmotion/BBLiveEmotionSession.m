@@ -37,6 +37,19 @@
     return self;
 }
 
+- (void)setHostTextView:(UITextView *)hostTextView
+{
+    if (_hostTextView != hostTextView) {
+        _hostTextView = hostTextView;
+        
+        // 禁止表情拖拽效果
+        if (@available(iOS 11.0, *)) {
+            // 只在iOS11及以上才有这个属性
+            _hostTextView.textDragInteraction.enabled = NO;
+        }
+    }
+}
+
 - (void)changeEmotionToggleBtnTypeWithKeyboardType:(BBLiveEmotionKeyboardType)keyboardType
 {
     if (keyboardType == BBLiveEmotionKeyboardTypeKeyboard) {
