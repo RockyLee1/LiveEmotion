@@ -10,6 +10,7 @@ target 'BBLiveEmotionDemo' do
 
 
     pod 'AFNetworking', '~> 3.2.1'
+    pod 'YYText', '~> 1.0.7'
 end
 
 target 'BBLiveEmotion' do

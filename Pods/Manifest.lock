@@ -17,15 +17,18 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - SDWebImage (~> 4.0.0)
+  - YYText (~> 1.0.7)
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 73c1f2f3c3af80f25d12ac80a4bafe1f3dd0f290
+PODFILE CHECKSUM: 72dc2aa709053b46656cf32b760587e1bbce3044
 
 COCOAPODS: 1.4.0

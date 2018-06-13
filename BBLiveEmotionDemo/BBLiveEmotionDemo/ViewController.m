@@ -9,7 +9,11 @@
 #import "ViewController.h"
 #import <BBLiveEmotion/BBLiveEmotion.h>
 
+#import <YYText.h>
+
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet YYTextView *yy_textView;
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
