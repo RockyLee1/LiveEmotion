@@ -16,6 +16,9 @@
 /// 所有的表情包
 @property (nonatomic, strong, readonly) NSArray<PPSticker *> *allStickers;
 
+// key 是描述  value 是所对应的元素
+@property (nonatomic, copy, readonly) NSDictionary<NSString *, __kindof UIImage *> *allEmoticonMapper;
+
 /* 匹配给定attributedString中的所有emoji，如果匹配到的emoji有本地图片的话会直接换成本地的图片
  *
  * @param attributedString 可能包含表情包的attributedString

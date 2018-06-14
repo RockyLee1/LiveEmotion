@@ -19,6 +19,12 @@
 + (void)replaceEmotionForAttributedString:(NSMutableAttributedString *)attributedString
                                      font:(UIFont *)font;
 
+/* 返回图片和描述的对应字典
+ *
+ * @param key 图片的对应文字描述 比如：[开心]
+ * @param value 图片资源，一个UIImage对象
+ */
 
++ (NSDictionary <NSString *, __kindof UIImage *>*)liveEmotionMapper;
 
 @end

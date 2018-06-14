@@ -18,4 +18,9 @@
                                                                       font:font];
 }
 
++ (NSDictionary <NSString *, __kindof UIImage *>*)liveEmotionMapper
+{
+    return [[PPStickerDataManager sharedInstance] allEmoticonMapper];
+}
+
 @end

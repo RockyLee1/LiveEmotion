@@ -20,7 +20,11 @@
 @end
 
 @interface PPStickerDataManager ()
+
 @property (nonatomic, strong, readwrite) NSArray<PPSticker *> *allStickers;
+
+@property (nonatomic, copy, readwrite) NSDictionary<NSString *, __kindof UIImage *> *allEmoticonMapper;
+
 @end
 
 @implementation PPStickerDataManager
@@ -55,6 +59,7 @@
 
     NSArray *array = [[NSArray alloc] initWithContentsOfFile:path];
     NSMutableArray<PPSticker *> *stickers = [[NSMutableArray alloc] init];
+    NSMutableDictionary <NSString *, __kindof UIImage *>*allEmotions = [[NSMutableDictionary alloc] init];
     
     for (NSDictionary *stickerDict in array) {
         PPSticker *sticker = [[PPSticker alloc] init];
@@ -66,11 +71,14 @@
             emoji.imageName = emojiDict[@"image"];
             emoji.emojiDescription = emojiDict[@"desc"];
             [emojis addObject:emoji];
+            
+            [allEmotions setObject:BBLiveEmotionImage(emoji.imageName) forKey:emoji.emojiDescription];
         }
         sticker.emojis = emojis;
         [stickers addObject:sticker];
     }
     self.allStickers = stickers;
+    self.allEmoticonMapper = [allEmotions copy];
 }
 
 #pragma mark - public method
