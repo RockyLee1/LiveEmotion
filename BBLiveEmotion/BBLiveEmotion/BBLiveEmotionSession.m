@@ -33,6 +33,7 @@
         _emotionTextFontSize = 16.f;
         _emotionLineSpacing = 5.f;
         _emotionTextColor = [UIColor pp_colorWithRGBString:@"#3B3B3B"];
+        _emotionTextColor = [UIColor blackColor];
     }
     return self;
 }

@@ -44,8 +44,16 @@ typedef NS_ENUM (NSUInteger, BBLiveEmotionKeyboardType) {
 @property (nonatomic, assign) CGFloat emotionLineSpacing;
 @property (nonatomic, strong) UIColor *emotionTextColor;
 
+/* 刷新当前输入框里面的表情，这个应该放在textView改变回调里面调用
+ *
+ */
 - (void)refreshTextUI;
 
+
+/* 改变响应按钮的样式
+ *
+ * @param keyboardType 指定的样式
+ */
 - (void)changeEmotionToggleBtnTypeWithKeyboardType:(BBLiveEmotionKeyboardType)keyboardType;
 
 @end

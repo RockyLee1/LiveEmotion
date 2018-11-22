@@ -9,11 +9,7 @@
 #import "ViewController.h"
 #import <BBLiveEmotion/BBLiveEmotion.h>
 
-#import <YYText.h>
-
-@interface ViewController ()
-
-@property (weak, nonatomic) IBOutlet YYTextView *yy_textView;
+@interface ViewController ()<UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
@@ -26,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.textView.font = [UIFont systemFontOfSize:16.f];
+    
     self.session = [[BBLiveEmotionSession alloc] init];
     self.session.hostTextView = self.textView;
     
@@ -33,6 +31,11 @@
     self.session.emotionToggleBtn.frame = CGRectMake(100, 100, 30, 30);
     
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)textViewDidChange:(UITextView *)textView
+{
+    [self.session refreshTextUI];
 }
 
 - (void)didReceiveMemoryWarning {

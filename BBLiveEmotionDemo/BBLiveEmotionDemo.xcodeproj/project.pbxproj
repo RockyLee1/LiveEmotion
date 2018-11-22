@@ -15,6 +15,7 @@
 		954E00BF20C7DF4D0059BBCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 954E00BE20C7DF4D0059BBCA /* main.m */; };
 		954E013F20C7E42B0059BBCA /* BBLiveEmotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954E00F120C7E0700059BBCA /* BBLiveEmotion.framework */; };
 		954E015320C7EA130059BBCA /* BBLiveEmotionResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 954E015120C7E9AF0059BBCA /* BBLiveEmotionResource.bundle */; };
+		95A28AB221A6996B005FF6AB /* CustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A28AB121A6996B005FF6AB /* CustomTextView.m */; };
 		95C45B0120D10E2B00F45B1D /* ViewController0.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C45B0020D10E2B00F45B1D /* ViewController0.m */; };
 		F819CF37E6F6D452FA68530F /* libPods-BBLiveEmotionDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 989C7AE5B98481E4A51D359A /* libPods-BBLiveEmotionDemo.a */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,8 @@
 		954E00BD20C7DF4D0059BBCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		954E00BE20C7DF4D0059BBCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		954E00EC20C7E0700059BBCA /* BBLiveEmotion.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BBLiveEmotion.xcodeproj; path = ../BBLiveEmotion/BBLiveEmotion.xcodeproj; sourceTree = "<group>"; };
+		95A28AB021A6996B005FF6AB /* CustomTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTextView.h; sourceTree = "<group>"; };
+		95A28AB121A6996B005FF6AB /* CustomTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTextView.m; sourceTree = "<group>"; };
 		95C45AFF20D10E2B00F45B1D /* ViewController0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController0.h; sourceTree = "<group>"; };
 		95C45B0020D10E2B00F45B1D /* ViewController0.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController0.m; sourceTree = "<group>"; };
 		989C7AE5B98481E4A51D359A /* libPods-BBLiveEmotionDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BBLiveEmotionDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +128,8 @@
 				954E00B320C7DF4B0059BBCA /* ViewController.m */,
 				95C45AFF20D10E2B00F45B1D /* ViewController0.h */,
 				95C45B0020D10E2B00F45B1D /* ViewController0.m */,
+				95A28AB021A6996B005FF6AB /* CustomTextView.h */,
+				95A28AB121A6996B005FF6AB /* CustomTextView.m */,
 				954E00B520C7DF4B0059BBCA /* Main.storyboard */,
 				954E00B820C7DF4D0059BBCA /* Assets.xcassets */,
 				954E00BA20C7DF4D0059BBCA /* LaunchScreen.storyboard */,
@@ -301,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A28AB221A6996B005FF6AB /* CustomTextView.m in Sources */,
 				954E00B420C7DF4B0059BBCA /* ViewController.m in Sources */,
 				954E00BF20C7DF4D0059BBCA /* main.m in Sources */,
 				954E00B120C7DF4B0059BBCA /* AppDelegate.m in Sources */,
